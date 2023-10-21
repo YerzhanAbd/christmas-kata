@@ -1,0 +1,2 @@
+add_library(doctest doctest.h)
+
