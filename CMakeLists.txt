@@ -25,7 +25,7 @@ include_directories("${CMAKE_SOURCE_DIR}/include")
 # Add Unit Tests file names (without .cpp extension)
 ####################################################
 list(APPEND UNIT_TESTS
-    kata
+  rect_area_test
 )
 
 ####################################################
