@@ -1,8 +1,8 @@
 #include <iostream>
-#include <multiply.h>
+#include <lights_control.h>
 using namespace std;
 
 int main() {
-    cout << multiply(2, 2) << endl;
+    cout << lights_control(2, 2) << endl;
     return 0;
 }

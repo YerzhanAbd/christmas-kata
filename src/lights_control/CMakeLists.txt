@@ -1,0 +1,10 @@
+add_library(lights_control src/lights_control.cpp)
+add_executable(lights_control_test test/lights_control_test.cpp)
+target_link_libraries(lights_control_test
+PRIVATE
+doctest
+lights_control)
+
+add_test(lights_control_test lights_control_test)
+
+target_include_directories(lights_control PUBLIC include)
