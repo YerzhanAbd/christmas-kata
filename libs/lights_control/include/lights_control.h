@@ -6,9 +6,9 @@
 class LightsController
 {
 private:
-    std::vector<std::vector<bool>> grid;
+    std::vector<std::vector<int>> grid;
 public:
-    LightsController() : grid(1000, std::vector<bool> (1000, false)) {};
+    LightsController() : grid(1000, std::vector<int> (1000, 0)) {};
     int getLights ();
     void manipulate(std::pair<int, int> top, std::pair<int, int> bottom, std::string command);
 }; 
