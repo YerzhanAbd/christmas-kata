@@ -1,0 +1,2 @@
+add_library(i_lights_control INTERFACE)
+target_include_directories(i_lights_control INTERFACE include)

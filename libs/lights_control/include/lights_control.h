@@ -1,9 +1,10 @@
 #pragma once
+#include <i_lights_control.h>
 #include <utility>
 #include <vector>
 #include <string>
 
-class LightsController
+class LightsController: public ILightsController
 {
 private:
     std::vector<std::vector<int>> grid;

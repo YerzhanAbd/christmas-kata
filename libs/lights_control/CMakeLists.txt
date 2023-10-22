@@ -1,4 +1,6 @@
 add_library(lights_control src/lights_control.cpp)
+target_link_libraries(lights_control i_lights_control)
+
 add_executable(lights_control_test test/lights_control_test.cpp)
 target_link_libraries(lights_control_test
 PRIVATE

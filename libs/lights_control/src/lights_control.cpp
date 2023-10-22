@@ -1,4 +1,5 @@
 #include <lights_control.h>
+#include <i_lights_control.h>
 #include <utility>
 #include <stdexcept>
 
