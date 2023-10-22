@@ -17,4 +17,5 @@ GIT_REPOSITORY "https://github.com/onqtam/doctest"
 GIT_TAG "v2.4.11")
 FetchContent_MakeAvailable(DocTest)
 
-add_subdirectory(src)
+add_subdirectory(libs)
+add_subdirectory(app)
