@@ -1,8 +1,10 @@
 #include <iostream>
 #include <lights_control.h>
+#include <utility>
 using namespace std;
 
 int main() {
-    cout << lights_control(2, 2) << endl;
+    LightsController* lights = new LightsController();
+    cout << lights->getLights() << endl;
     return 0;
 }

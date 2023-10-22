@@ -1,5 +1,12 @@
 #include <lights_control.h>
+#include <utility>
 
-int lights_control (int a, int b) {
-    return (int) a * b;
+int LightsController::getLights() {
+    int lit = 0;
+    for (auto row: this->grid) {
+        for (auto col: row) {
+            lit += col;
+        }
+    }
+    return lit;
 }
