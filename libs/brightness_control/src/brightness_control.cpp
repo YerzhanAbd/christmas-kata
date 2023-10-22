@@ -1,8 +1,8 @@
-#include <lights_control.h>
+#include <brightness_control.h>
 #include <utility>
 #include <stdexcept>
 
-int LightsController::getLights() {
+int BrightnessController::getLights() {
     int lit = 0;
     for (auto row: this->grid) {
         for (auto col: row) {
@@ -12,7 +12,7 @@ int LightsController::getLights() {
     return lit;
 }
 
-void LightsController::manipulate(std::pair<int, int> top, std::pair<int, int> bottom, std::string command) {
+void BrightnessController::manipulate(std::pair<int, int> top, std::pair<int, int> bottom, std::string command) {
     if (command != "ON" && command != "OFF" && command != "TOGGLE") {
         throw std::invalid_argument("Choose either ON, OFF, or TOGGLE as the command.");
     }
@@ -29,13 +29,13 @@ void LightsController::manipulate(std::pair<int, int> top, std::pair<int, int> b
     for (int row = leftTop; row <= leftBottom; row++) {
         for (int col = rightTop; col <= rightBottom; col++) {
             if (command == "ON") {
-                this->grid[row][col] |= 1;
+                this->grid[row][col] += 1;
             }
             else if (command == "OFF") {
-                this->grid[row][col] &= 0;
+                this->grid[row][col] = std::max(this->grid[row][col]-1, 0);
             }
             else {
-                this->grid[row][col] ^= 1;
+                this->grid[row][col] += 2;
             }
         }
     }

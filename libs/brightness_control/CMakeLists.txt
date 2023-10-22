@@ -1,0 +1,12 @@
+add_library(brightness_control src/brightness_control.cpp)
+target_link_libraries(brightness_control i_lights_control)
+
+add_executable(brightness_control_test test/brightness_control_test.cpp)
+target_link_libraries(brightness_control_test
+PRIVATE
+doctest
+brightness_control)
+
+add_test(brightness_control_test brightness_control_test)
+
+target_include_directories(brightness_control PUBLIC include)
